@@ -13,6 +13,16 @@ extern "C" {
         output_vault_path: String,
     ) -> CurlResult;
 
+    // idem as above 
+    // but posting content of data_vault_path with the --data-binary path
+    // carriage returns and white spaces are not removed from content of file
+    // used when uploading files as multipart, for example with Pinata. 
+    pub fn curl_post_binary(
+        request: CurlRequest,
+        data_vault_path: String,
+        output_vault_path: String,
+    ) -> CurlResult;
+
     // Make an HTTP GET request.
     // The response is written to the `output_vault_path` file.
     pub fn curl_get(request: CurlRequest, output_vault_path: String) -> CurlResult;

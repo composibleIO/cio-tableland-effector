@@ -3,7 +3,7 @@ version: 1
 
 type: rust
 
-name: curl_effector
+name: cio_curl_effector
 
 effects:
   binaries:

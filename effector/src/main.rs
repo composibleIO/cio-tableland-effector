@@ -72,6 +72,15 @@ pub fn curl_post(
     curl_post_impl(request, data_vault_path, output_vault_path).into()
 }
 
+#[marine]
+pub fn curl_post_binary(
+    request: CurlRequest,
+    data_vault_path: &str,
+    output_vault_path: &str,
+) -> CurlResult {
+    curl_post_binary_impl(request, data_vault_path, output_vault_path).into()
+}
+
 fn curl_post_impl(
     request: CurlRequest,
     data_vault_path: &str,
@@ -85,6 +94,28 @@ fn curl_post_impl(
         String::from("-X"),
         String::from("POST"),
         String::from("--data"),
+        format!("@{}", data_vault_path),
+        String::from("-o"),
+        output_vault_path,
+    ];
+    let mut headers = format_header_args(&request.headers);
+    args.append(&mut headers);
+    run_curl(args).map(|res| res.trim().to_string())
+}
+
+fn curl_post_binary_impl(
+    request: CurlRequest,
+    data_vault_path: &str,
+    output_vault_path: &str,
+) -> Result<String> {
+    let url = check_url(request.url)?;
+    let data_vault_path = inject_vault(data_vault_path)?;
+    let output_vault_path = inject_vault(output_vault_path)?;
+    let mut args = vec![
+        String::from(url),
+        String::from("-X"),
+        String::from("POST"),
+        String::from("--data-binary"),
         format!("@{}", data_vault_path),
         String::from("-o"),
         output_vault_path,

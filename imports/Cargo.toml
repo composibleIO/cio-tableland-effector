@@ -1,11 +1,11 @@
 [package]
-name = "curl-effector-imports"
+name = "cio-curl-effector-imports"
 version = "0.1.1"
 edition = "2021"
 publish = true
 description = "cURL Effector Bindings"
 license = "Apache-2.0"
-authors = ["Fluence Labs"]
+authors = ["composible.io","Fluence Labs"]
 repository = "https://github.com/fluencelabs/curl-effector"
 
 
