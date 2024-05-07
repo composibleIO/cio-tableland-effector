@@ -3,7 +3,7 @@ version: 1
 
 type: rust
 
-name: cio_curl_effector
+name: cio_tableland_effector
 
 effects:
   binaries:

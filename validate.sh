@@ -4,7 +4,7 @@ set -o errexit -o nounset -o pipefail
 # set current working directory to script directory to run script from everywhere
 cd "$(dirname "$0")"
 
-EFFECTOR_NAME="cio_curl_effector"
+EFFECTOR_NAME="cio_tableland_effector"
 
 if [[ ! -e cid/artifacts/cidv1 ]]
 then

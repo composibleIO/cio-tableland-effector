@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=../../../../../.fluence/schemas/module.json
+version: 1
+
+type: compiled
+
+name: cio_tableland_effector
+
+effects:
+  binaries:
+    ipfs: /usr/bin/curl

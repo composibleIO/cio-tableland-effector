@@ -18,3 +18,5 @@ Cargo.lock
 **/test_artifacts/temp
 **/artifacts
 .fluence
+
+module/*.wasm

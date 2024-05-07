@@ -1,5 +1,22 @@
 
-Cloned from https://github.com/fluencelabs/curl-effector with minor tweaks: 
+bafybeiesawg74it34t7325vudnodaiyhsdqooqf5nxe3ud2hjcwkuktp6a
 
-* added method curl_post_binary for posting content of data_vault_path with the --data-binary path, so that carriage returns and white spaces are not removed from content of file
-which is relevant when uploading files as multipart, for example with Pinata. 
+Work in progress! Uploaded so i can use it in a project. The sidecar only works with my specific table. 
+
+Forked from https://github.com/fluencelabs/curl-effector 
+
+* works in concert with a tableland-sidecar which you can deploy to vercel or host yourself. 
+* the sidecar runs on arbitrum testnet and should contain a private key of an account with test tokens. 
+* It takes ~ 7 seconds for new data to be included on chain and synced along the distributed database
+* I am experimentig with an optimistic mode, 
+
+* you can insert rows into a table
+* you can query the table 
+
+to do: 
+* make table information generic 
+* table creation 
+* batch insert
+
+
+ 

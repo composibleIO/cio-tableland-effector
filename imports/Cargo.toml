@@ -13,4 +13,6 @@ repository = "https://github.com/composibleIO/cio-curl-effector"
 
 [dependencies]
 curl-effector-types = { workspace = true }
+cio-response-types = { git = "https://github.com/composibleIO/cio-response-types", branch = "main" }
 marine-rs-sdk = { workspace = true }
+serde = "1.0.198"
