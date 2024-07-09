@@ -1,5 +1,5 @@
 
-bafybeiesawg74it34t7325vudnodaiyhsdqooqf5nxe3ud2hjcwkuktp6a
+bafybeihathubxccjb2zj2i64v5o43tera4sjk46zuaeithg2ula5i7xuq4
 
 Work in progress! Uploaded so i can use it in a project. The sidecar only works with my specific table. 
 

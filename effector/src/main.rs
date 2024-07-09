@@ -21,6 +21,10 @@ pub fn main() {}
 #[marine]
 pub fn tl_insert(gateway: String, tl_request: &TLRequest) -> AMResponse {
 
+    println!("ik ben een effector");
+    println!("{:?}", tl_request);
+    println!("{:?}", gateway);
+
     query::run(
         format!("{}/record", gateway),
         &serde_json::to_string(tl_request).unwrap()

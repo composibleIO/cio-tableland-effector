@@ -19,4 +19,4 @@ Cargo.lock
 **/artifacts
 .fluence
 
-module/*.wasm
+#module/*.wasm
